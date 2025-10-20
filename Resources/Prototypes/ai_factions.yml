@@ -54,6 +54,7 @@
   - Dino # imp
   - Dragon
   - Replicator # imp
+# comment added for testing purposes
 
 - type: npcFaction
   id: SimpleHostile
