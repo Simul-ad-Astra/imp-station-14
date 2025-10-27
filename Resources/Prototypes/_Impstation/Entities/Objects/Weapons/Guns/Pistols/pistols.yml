@@ -297,10 +297,10 @@
         Blunt: 16
 
 - type: entity
-  name: Universal NT-SS-8
+  name: Universal NT-SS
   parent: [BaseWeaponPistol, BaseSecurityContraband]
   id: WeaponPistolUniversal
-  description: A failed attempt by NanoTrasen's gun manufacturing division to make a "Super Standarized" sidearm. Small chance of misfiring. Accepts all cartridge and shell calibers.
+  description: A semi-failed attempt by NanoTrasen's gun manufacturing division to make a "Super Standarized" sidearm. Small chance of misfiring. Accepts all cartridge and shell calibers.
   components:
   - type: Sprite
     sprite: _Impstation/Objects/Weapons/Guns/Pistols/freelancer.rsi
@@ -312,7 +312,7 @@
   - type: Clothing
     sprite: _Impstation/Objects/Weapons/Guns/Pistols/freelancer.rsi
   - type: Gun
-    fireRate: 4
+    fireRate: 2
     availableModes:
     - SemiAuto
     soundGunshot:
@@ -335,5 +335,22 @@
         priority: 1
         whitelist:
           tags:
+            - BulletFoam
+            - Cartridge
+            - CartridgeAntiMateriel
+            - CartridgeCap
+            - CartridgeCaselessRifle
+            - CartridgeHeavyRifle
+            - CartridgeLightRifle
+            - CartridgeLPistol
+            - CartridgeMagnum
+            - CartridgeMagnumStun
             - CartridgePistol
             - CartridgePistolStun
+            - CartridgeRifle
+            - Shell
+            - ShellShotgun
+            - ShellShotgunLight
+            - ShellShotgunBeanbag
+            - ShellSlug
+
