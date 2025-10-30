@@ -283,6 +283,9 @@
   id: MagazinePistolP2
 
 - type: Tag
+  id: MagazinePistolUni # for specifically the NT-SS Universal gun
+
+- type: Tag
   id: MagazineZipper
 
 - type: Tag
