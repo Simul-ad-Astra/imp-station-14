@@ -25,6 +25,9 @@
   id: BlasterCell
 
 - type: Tag
+  id: BorgModuleTckut
+
+- type: Tag
   id: BorgModuleTckTck
 
 - type: Tag
@@ -128,9 +131,6 @@
 
 - type: Tag
   id: DecapoidGenericTag
-
-- type: Tag
-  id: DionaMinded
 
 - type: Tag
   id: DroneUsable
@@ -311,6 +311,12 @@
 
 - type: Tag
   id: NullrodUpgradeKit
+
+- type: Tag
+  id: OlympusBackTank
+
+- type: Tag
+  id: OlympusFlamer
 
 - type: Tag
   id: OreBag
