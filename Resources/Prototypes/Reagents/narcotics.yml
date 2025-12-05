@@ -262,6 +262,8 @@
         damage:
           types:
             Cellular: 0.2 # imp edit end
+      - !type:CreateGas
+        gas: Water
 
 # TODO: Replace these nonstandardized effects with generic brain damage
 - type: reagent
