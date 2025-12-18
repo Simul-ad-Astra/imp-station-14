@@ -220,16 +220,16 @@
 # - type: entity
 #   name: minigun
 #   id: WeaponMinigun
-#   parent: [ BaseWeaponHeavyMachineGun,  BaseMajorContraband ] #imp
+#   parent: [ BaseWeaponHeavyMachineGun, BaseMajorContraband ] #imp
 #   description: Vzzzzzt! Rahrahrahrah! Vrrrrr! Uses .10 mini ammo. #imp
 #   components:
 #   - type: Item
 #     sprite:
 - type: entity
-  name: Dan's ValuShot Super 15000
+  name: Dan's Room-Clearer 7000
   parent: [BaseWeaponShotgun, BaseGunWieldable, BaseMajorContraband]
   id: WeaponMinigunValu
-  description: You can tell by the loose jingle of bullets inside the frame that you're really getting your money's worth.
+  description: Ever wanted a room to be empty? Ever wanted to be collective nightmare of a small army? Then Discount Dan has the gun for you!
   components:
   - type: Sprite
     sprite: _Impstation/Objects/Weapons/Guns/MachineGuns/minigun.rsi
@@ -249,9 +249,9 @@
     selectedMode: FullAuto
     availableModes:
       - FullAuto
-    fireRate: 15
-    minAngle: 30
-    maxAngle: 45
+    fireRate: 20
+    minAngle: 50
+    maxAngle: 120
     angleIncrease: 1
     angleDecay: 10
     soundGunshot:
@@ -260,22 +260,22 @@
     whitelist:
       tags:
       - CartridgeHeavyRifle
-    capacity: 30
-    proto: CartridgeMinigun
+    capacity: 100
+    proto: CartridgeMinigunValuShot
     cycleable: false
     mayTransfer: false
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/hpistol_magin.ogg
     soundRack:
       path: /Audio/Weapons/Guns/Cock/hpistol_cock.ogg
-  - type: GunRequiresWield
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
         ents: []
-  - type: Tag
-    tags:
-    - Sidearm
+  - type: GunRequiresWield
+  # - type: Tag
+  #   tags:
+  #   - Sidearm
   - type: Damageable
     damageContainer: Inorganic
   - type: DamageOnLand
@@ -293,18 +293,18 @@
           collection: MetalBreak
       - !type:SpawnEntitiesBehavior
         spawn:
-          BrokenValuShot:
+          BrokenValuMinigun:
             min: 1
             max: 1
-          CartridgePistolValuShot:
+          CartridgeMinigunValuShot:
             min: 0
             max: 5
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: PhysicalComposition
     materialComposition:
-      Plastic: 200
-      Steel: 50
+      Plastic: 300
+      Steel: 55
   - type: MeleeWeapon
     range: 0.8
     attackRate: 0.5
@@ -320,7 +320,13 @@
   - type: AltFireMelee
     attackType: Heavy
   - type: DamageOtherOnHit #for throwing
-    staminaCost: 9
+    staminaCost: 15
     damage:
       types:
-        Blunt: 8
+        Blunt: 12
+  - type: StaminaDamageOnHit
+    damage: 15 #slight stagger, but still like 7 hits to stun completely
+  - type: MeleeRequiresWield
+  - type: MeleeThrowOnHit
+    distance: 0.8
+    speed: 5

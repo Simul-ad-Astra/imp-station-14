@@ -18,3 +18,14 @@
     damage:
       types:
         Piercing: 8
+
+- type: entity
+  id: BulletValuMini
+  name: bullet (.02 mini)
+  parent: BulletHeavyRifle
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 1.5

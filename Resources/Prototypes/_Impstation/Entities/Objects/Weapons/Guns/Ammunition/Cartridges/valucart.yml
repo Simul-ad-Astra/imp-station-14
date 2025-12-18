@@ -24,3 +24,13 @@
   - type: CartridgeAmmo
     proto: BulletValuPlus
     deleteOnSpawn: true
+
+- type: entity
+  id: CartridgeMinigunValuShot
+  name: cartridge (.02 mini)
+  description: An incredibly cartridge designed to make the dreams of a greedy capitalist real.
+  parent: BaseCartridgeHeavyRifle
+  components:
+  - type: CartridgeAmmo
+    proto: BulletValuMini
+    deleteOnSpawn: true
