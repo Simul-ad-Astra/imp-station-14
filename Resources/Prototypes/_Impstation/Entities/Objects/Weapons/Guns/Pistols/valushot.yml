@@ -216,3 +216,111 @@
     damage:
       types:
         Blunt: 16
+
+# - type: entity
+#   name: minigun
+#   id: WeaponMinigun
+#   parent: [ BaseWeaponHeavyMachineGun,  BaseMajorContraband ] #imp
+#   description: Vzzzzzt! Rahrahrahrah! Vrrrrr! Uses .10 mini ammo. #imp
+#   components:
+#   - type: Item
+#     sprite:
+- type: entity
+  name: Dan's ValuShot Super 15000
+  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseMajorContraband]
+  id: WeaponMinigunValu
+  description: You can tell by the loose jingle of bullets inside the frame that you're really getting your money's worth.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Weapons/Guns/MachineGuns/minigun.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: _Impstation/Objects/Weapons/Guns/MachineGuns/minigun.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: Item
+    size: Ginormous
+    sprite: _Impstation/Objects/Weapons/Guns/MachineGuns/minigun.rsi
+  - type: Gun
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    fireRate: 15
+    minAngle: 30
+    maxAngle: 45
+    angleIncrease: 1
+    angleDecay: 10
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/minigun.ogg
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - CartridgeHeavyRifle
+    capacity: 30
+    proto: CartridgeMinigun
+    cycleable: false
+    mayTransfer: false
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/hpistol_magin.ogg
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/hpistol_cock.ogg
+  - type: GunRequiresWield
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+        ents: []
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 8
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 8
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          BrokenValuShot:
+            min: 1
+            max: 1
+          CartridgePistolValuShot:
+            min: 0
+            max: 5
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 200
+      Steel: 50
+  - type: MeleeWeapon
+    range: 0.8
+    attackRate: 0.5
+    damage:
+      types:
+        Blunt: 4
+    soundHit:
+      path: /Audio/Effects/hit_kick.ogg
+    soundSwing:
+      path: /Audio/_Impstation/Weapons/Guns/Melee/shove_foley.ogg
+    resetOnHandSelected: false
+    wideAnimationRotation: -80
+  - type: AltFireMelee
+    attackType: Heavy
+  - type: DamageOtherOnHit #for throwing
+    staminaCost: 9
+    damage:
+      types:
+        Blunt: 8
