@@ -234,7 +234,7 @@
   - type: Sprite
     sprite: _Impstation/Objects/Weapons/Guns/MachineGuns/valuminigun.rsi
     layers:
-      - state: base
+      - state: icon
         map: ["enum.GunVisualLayers.Base"]
   - type: Clothing
     sprite: _Impstation/Objects/Weapons/Guns/MachineGuns/valuminigun.rsi
