@@ -49,7 +49,7 @@
   description: The logical conclusion for a real bargain.
   components:
   - type: Sprite
-    sprite: _Impstation/Objects/Weapons/Guns/Pistols/valu.rsi
+    sprite: _Impstation/Objects/Weapons/Guns/MachineGuns/valuminigun.rsi
     state: broken
   - type: DamageOtherOnHit
     damage:

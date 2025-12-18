@@ -232,19 +232,19 @@
   description: Ever wanted a room to be empty? Ever wanted to be collective nightmare of a small army? Then Discount Dan has the gun for you!
   components:
   - type: Sprite
-    sprite: _Impstation/Objects/Weapons/Guns/MachineGuns/minigun.rsi
+    sprite: _Impstation/Objects/Weapons/Guns/MachineGuns/valuminigun.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
   - type: Clothing
-    sprite: _Impstation/Objects/Weapons/Guns/MachineGuns/minigun.rsi
+    sprite: _Impstation/Objects/Weapons/Guns/MachineGuns/valuminigun.rsi
     quickEquip: false
     slots:
     - Back
     - suitStorage
   - type: Item
     size: Ginormous
-    sprite: _Impstation/Objects/Weapons/Guns/MachineGuns/minigun.rsi
+    sprite: _Impstation/Objects/Weapons/Guns/MachineGuns/valuminigun.rsi
   - type: Gun
     selectedMode: FullAuto
     availableModes:
