@@ -229,7 +229,7 @@
   name: Dan's Room-Clearer 7000
   parent: [BaseWeaponShotgun, BaseGunWieldable, BaseMajorContraband]
   id: WeaponMinigunValu
-  description: Ever wanted a room to be empty? Ever wanted to be collective nightmare of a small army? Then Discount Dan has the gun for you!
+  description: Ever wanted a room to be empty? Ever wanted to be the collective nightmare of a small army? Then Discount Dan has the gun for you!
   components:
   - type: Sprite
     sprite: _Impstation/Objects/Weapons/Guns/MachineGuns/valuminigun.rsi
