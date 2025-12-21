@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ClothingEyesBase, BaseLensSlot, BaseScienceContraband, BaseCommandContraband] # BaseLensSlot from imp
+  parent: [ClothingEyesBase, BaseLensSlot, BaseScienceContraband] # should figure out if this is good contraband status later
   id: ClothingEyesHudModular
   name: modular hud
   description: A heads-up display that can provide both accurate health data and chemical composition information.
