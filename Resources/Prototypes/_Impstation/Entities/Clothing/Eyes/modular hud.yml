@@ -8,3 +8,68 @@
     sprite: _Impstation/Clothing/Eyes/Hud/medchem.rsi
   - type: Clothing
     sprite: _Impstation/Clothing/Eyes/Hud/medchem.rsi
+  - type: ItemSlots
+    slots:
+      lens_slot:
+        whitelist:
+          tags:
+          - Lens
+      hud_slot:
+        name: hud chip
+        priority: 4
+        whitelist:
+          tags:
+          - HudChip
+
+- type: entity
+  parent: ClothingEyesHudModular
+  id: ClothingEyesHudModularTwoSlots
+  name: modular hud
+  suffix: 2 slots
+  components:
+  - type: ItemSlots
+    slots:
+      lens_slot:
+        whitelist:
+          tags:
+          - Lens
+      hud_slot:
+        name: hud chip
+        priority: 4
+        whitelist:
+          tags:
+          - HudChip
+      hud_slot_2:
+        name: hud chip 2
+        priority: 4
+        whitelist:
+          tags:
+          - HudChip
+
+- type: entity # FOR TESTING!!! DELETE AFTER DONE TESTING!!!!!!!!!
+  parent: EncryptionKey
+  id: HudChipTesting
+  name: Generic Hud Chip
+  description: An encryption key used by anyone.
+  components:
+  - type: Sprite
+    layers:
+    - state: crypt_gray
+    - state: common_label
+  - type: Tag
+    tags:
+    - HudChip
+
+- type: entity # FOR TESTING!!! DELETE AFTER DONE TESTING!!!!!!!!!
+  parent: EncryptionKey
+  id: HudChipTestingTwo
+  name: Generic Hud Chip Two
+  description: An encryption key used by anyone.
+  components:
+  - type: Sprite
+    layers:
+    - state: crypt_gray
+    - state: cargo_label
+  - type: Tag
+    tags:
+    - HudChip

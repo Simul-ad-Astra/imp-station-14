@@ -187,6 +187,9 @@
   id: HudAdmin
 
 - type: Tag
+  id: HudChip
+
+- type: Tag
   id: HudSalvage
 
 - type: Tag
