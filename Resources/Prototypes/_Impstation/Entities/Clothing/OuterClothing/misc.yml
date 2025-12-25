@@ -42,6 +42,8 @@
   description: A strap for holding things on your pack while also having a backpack! Too insecure to hold weapons or gas tanks.
   components:
   - type: Sprite
-    sprite: _Impstation/Clothing/OuterClothing/Misc/apronnurse.rsi
-  # - type: Clothing
-  #   sprite: _Impstation/Clothing/OuterClothing/Misc/apronnurse.rsi
+    sprite: _Impstation/Clothing/OuterClothing/Misc/backstrap.rsi
+  - type: Item
+    size: Normal
+    shape:
+    - 0, 0, 0, 1
