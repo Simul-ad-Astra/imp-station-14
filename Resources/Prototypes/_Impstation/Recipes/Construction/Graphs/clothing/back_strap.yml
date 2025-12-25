@@ -6,8 +6,8 @@
     edges:
     - to: strap
       steps:
-      - material: cloth
+      - material: Cloth
         amount: 4
-        doAfter: 1
+        doAfter: 2
   - node: strap
     entity: ClothingOuterStrap

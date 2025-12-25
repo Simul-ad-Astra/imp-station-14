@@ -53,7 +53,7 @@
   objectType: Item
 
 - type: construction
-  id: ClothingBackStrap
+  id: BackStrap
   graph: BackStrap
   startNode: start
   targetNode: strap

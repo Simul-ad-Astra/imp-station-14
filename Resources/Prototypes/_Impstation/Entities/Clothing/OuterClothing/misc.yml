@@ -47,3 +47,5 @@
     size: Normal
     shape:
     - 0, 0, 0, 1
+  - type: Construction
+    graph: BackStrap
