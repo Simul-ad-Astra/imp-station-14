@@ -34,3 +34,14 @@
     sprite: _Impstation/Clothing/OuterClothing/Misc/apronnurse.rsi
   - type: Clothing
     sprite: _Impstation/Clothing/OuterClothing/Misc/apronnurse.rsi
+
+- type: entity
+  parent: [ ClothingOuterBase, AllowSuitStorageNotWeaponsOrTanks ]
+  id: ClothingOuterStrap
+  name: Back Strap
+  description: A strap for holding things on your pack while also having a backpack! Too insecure to hold weapons or gas tanks.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/OuterClothing/Misc/apronnurse.rsi
+  # - type: Clothing
+  #   sprite: _Impstation/Clothing/OuterClothing/Misc/apronnurse.rsi

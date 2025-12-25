@@ -14,3 +14,24 @@
   - type: ContainerContainer
     containers:
       lens_slot: !type:ContainerSlot {}
+
+- type: entity
+  abstract: true
+  id: AllowSuitStorageNotWeapons
+  components:
+  - type: AllowSuitStorage
+    blacklist:
+      components:
+      - Gun
+      - MeleeWeapon
+
+- type: entity
+  abstract: true
+  id: AllowSuitStorageNotWeaponsOrTanks
+  components:
+  - type: AllowSuitStorage
+    blacklist:
+      components:
+      - Gun
+      - GasTank
+      - MeleeWeapon
