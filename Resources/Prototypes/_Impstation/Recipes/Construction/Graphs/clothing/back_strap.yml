@@ -1,0 +1,13 @@
+- type: constructionGraph
+  id: BackStrap
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: strap
+      steps:
+      - material: cloth
+        amount: 4
+        doAfter: 1
+  - node: strap
+    entity: ClothingOuterStrap

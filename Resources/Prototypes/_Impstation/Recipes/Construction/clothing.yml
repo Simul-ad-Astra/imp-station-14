@@ -51,3 +51,11 @@
   targetNode: eyesack
   category: construction-category-clothing
   objectType: Item
+
+- type: construction
+  id: ClothingBackStrap
+  graph: BackStrap
+  startNode: start
+  targetNode: strap
+  category: construction-category-clothing
+  objectType: Item
