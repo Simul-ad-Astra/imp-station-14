@@ -7,6 +7,9 @@
   id: Aloe
 
 - type: Tag
+  id: AnomalocaridClaw
+
+- type: Tag
   id: Ash
 
 - type: Tag
@@ -19,10 +22,10 @@
   id: BearHide
 
 - type: Tag
-  id: BeltUtility
+  id: BlasterCell
 
 - type: Tag
-  id: BlasterCell
+  id: BoarFriend #lets boar choose the tagged entity as a target for NPCImprintingOnSpawnBehavior
 
 - type: Tag
   id: BorgModuleTckut
@@ -328,6 +331,9 @@
   id: Pribar
 
 - type: Tag
+  id: PlantAnalyzer
+
+- type: Tag
   id: Plushie
 
 - type: Tag
@@ -374,6 +380,9 @@
 
 - type: Tag
   id: SprayPainter
+
+- type: Tag
+  id: StarflareCell
 
 - type: Tag
   id: Stunbaton
