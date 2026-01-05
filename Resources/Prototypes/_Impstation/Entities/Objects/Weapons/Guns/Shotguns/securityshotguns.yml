@@ -189,9 +189,9 @@
     size: Small
     shape:
     - 0,0,1,0
-    sprite: _Impstation/Objects/Weapons/Guns/Revolvers/sec45.rsi
+    sprite: _Impstation/Objects/Weapons/Guns/Pistols/viper.rsi
   - type: Sprite
-    sprite: _Impstation/Objects/Weapons/Guns/Revolvers/sec45.rsi
+    sprite: _Impstation/Objects/Weapons/Guns/Pistols/viper.rsi
   - type: Clothing
     slots:
     - suitStorage
@@ -213,9 +213,9 @@
   - type: BallisticAmmoProvider
     whitelist:
       tags:
-      - CartridgeAntiMateriel
-    capacity: 7
-    proto: CartridgeAntiMateriel
+      - CartridgeMagnum
+    capacity: 1
+    proto: CartridgeMagnum
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg
   - type: MeleeWeapon
