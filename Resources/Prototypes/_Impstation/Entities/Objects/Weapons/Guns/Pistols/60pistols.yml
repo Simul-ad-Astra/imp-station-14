@@ -1,0 +1,57 @@
+- type: entity
+  name: High-Noon Mk.3
+  parent: [BaseWeaponPistol,  BaseSecurityContraband]
+  id: WeaponPistolViper
+  description: You, me, the center o' town, at noon. One shot each. Uses .60 anti-materiel ammo.
+  components:
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
+    sprite: _Impstation/Objects/Weapons/Guns/Revolvers/sec45.rsi
+  - type: Sprite
+    sprite: _Impstation/Objects/Weapons/Guns/Revolvers/sec45.rsi
+  - type: Clothing
+    slots:
+    - suitStorage
+    - Belt
+    sprite: _Impstation/Objects/Weapons/Guns/Revolvers/sec45.rsi
+  - type: Gun
+    fireRate: 5
+    minAngle: 0
+    maxAngle: 2
+    angleIncrease: 1
+    angleDecay: 10
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/revolver.ogg
+  - type: ItemSlots
+    slots:
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeAntiMateriel
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeAntiMateriel
+  - type: ContainerContainer
+    containers:
+      gun_chamber: !type:ContainerSlot
+  - type: MeleeWeapon
+    range: 1
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 8
+    soundHit:
+      path: /Audio/Effects/hit_kick.ogg
+    soundSwing:
+      path: /Audio/_Impstation/Weapons/Guns/Melee/shove_foley.ogg
+    resetOnHandSelected: false
+    wideAnimationRotation: -80
+  - type: AltFireMelee
+    attackType: Heavy
+  - type: DamageOtherOnHit #for throwing
+    staminaCost: 2
+    damage:
+      types:
+        Blunt: 8
