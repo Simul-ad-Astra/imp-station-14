@@ -82,23 +82,23 @@
             - CartridgeMagnum
 
 - type: entity
-  name: High-Noon Mk.3
-  parent: [BaseWeaponPistol,  BaseSecurityContraband]
-  id: WeaponPistolHighNoon
-  description: You, me, the center o' town, at noon. One shot each. Uses .60 anti-materiel ammo.
+  name: Epoch Mk.3
+  parent: [BaseWeaponPistol, BaseMajorContraband]
+  id: WeaponPistolEpoch
+  description: Part of a limited-production prototype from a master gunsmith. The lack of magazine and self-reloading mechanism makes it handle and aim like a dream. Uses .45 magnum ammo.
   components:
   - type: Item
     size: Small
     shape:
     - 0,0,1,0
-    sprite: _Impstation/Objects/Weapons/Guns/Revolvers/sec45.rsi
+    sprite: _Impstation/Objects/Weapons/Guns/Pistols/epoch.rsi
   - type: Sprite
-    sprite: _Impstation/Objects/Weapons/Guns/Revolvers/sec45.rsi
+    sprite: _Impstation/Objects/Weapons/Guns/Pistols/epoch.rsi
   - type: Clothing
     slots:
     - suitStorage
     - Belt
-    sprite: _Impstation/Objects/Weapons/Guns/Revolvers/sec45.rsi
+    sprite: _Impstation/Objects/Weapons/Guns/Pistols/epoch.rsi
   - type: Gun
     fireRate: 5
     minAngle: 0
@@ -109,7 +109,14 @@
     availableModes:
       - SemiAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/revolver.ogg
+      path: /Audio/Weapons/Guns/Gunshots/hpistol.ogg
+  - type: Wieldable
+  # - type: UseDelay
+  #   delay: 1.0
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 4
+    pvsIncrease: 0.4
   - type: ItemSlots
     slots:
       # gun_magazine:

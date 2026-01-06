@@ -180,10 +180,10 @@
         Blunt: 8
 
 - type: entity
-  name: High-Noon Mk.2
+  name: Epoch Mk.2
   parent: [BaseWeaponShotgun, BaseSecurityContraband]
-  id: WeaponShotgunHighNoon
-  description: You, me, the center o' town, at noon. One shot each. Uses .60 anti-materiel ammo.
+  id: WeaponShotgunEpoch
+  description: Part of a limited-production prototype from a master gunsmith. The lack of magazine and self-reloading mechanism makes it handle and aim like a dream. Uses .45 magnum ammo.
   components:
   - type: Item
     size: Small

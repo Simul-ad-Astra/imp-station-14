@@ -198,10 +198,10 @@
     ammoSlots: [ null, null, null, null, null ]
 
 - type: entity
-  name: High-Noon Mk.1
+  name: Epoch Mk.1
   parent: [BaseWeaponRevolver, BaseSecurityContraband]
-  id: WeaponRevolverHighNoon
-  description: You, me, the center o' town, at noon. One shot each. Uses .60 anti-materiel ammo.
+  id: WeaponRevolverEpoch
+  description: Part of a limited-production prototype from a master gunsmith. The lack of magazine and self-reloading mechanism makes it handle and aim like a dream. Uses .45 magnum ammo.
   components:
   - type: Sprite
     sprite: _Impstation/Objects/Weapons/Guns/Revolvers/sec45.rsi
