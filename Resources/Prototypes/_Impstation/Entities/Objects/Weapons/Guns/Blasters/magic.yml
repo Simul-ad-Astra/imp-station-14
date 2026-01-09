@@ -1,0 +1,61 @@
+- type: entity
+  name: Revolving Mirror of Fire # TODO: make self-reloading, but still need you to empty the chamber, once possible
+  parent: [BaseWeaponBattery, BaseMagicalContraband]
+  id: WeaponBlasterFireballMirror
+  description: A mirror that shows you a parellel you, one that has a sick ass revolver that shoots fireballs. Just feed .fireball bullets to the mirror and the other you will reload for you!
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Weapons/Guns/Revolvers/anaconda.rsi
+    layers:
+      - state: icon
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: _Impstation/Objects/Weapons/Guns/Revolvers/anaconda.rsi
+    slots:
+    - suitStorage
+    - Belt
+  - type: Item
+    size: Normal
+    storedSprite:
+      state: storage
+      sprite: _Impstation/Objects/Weapons/Guns/Revolvers/anacondax64.rsi
+    shape:
+    - 0,0,3,0
+    - 0,1,0,1
+    sprite: _Impstation/Objects/Weapons/Guns/Revolvers/anaconda.rsi
+  - type: Gun
+    fireRate: 1.25
+    minAngle: 1
+    maxAngle: 50
+    angleIncrease: 15
+    angleDecay: 4
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/revolver.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: CartridgeFireball
+    fireCost: 1
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 0.1
+  - type: Battery
+    maxCharge: 6
+    startingCharge: 6
+  - type: MeleeWeapon
+    range: 0.8
+    attackRate: 0.5
+    damage:
+      types:
+        Blunt: 10
+    soundHit:
+      path: /Audio/Effects/hit_kick.ogg
+    soundSwing:
+      path: /Audio/_Impstation/Weapons/Guns/Melee/shove_foley.ogg
+    resetOnHandSelected: false
+    wideAnimationRotation: -80
+  - type: AltFireMelee
+    attackType: Heavy
+  - type: DamageOtherOnHit #for throwing
+    staminaCost: 10
+    damage:
+      types:
+        Blunt: 12

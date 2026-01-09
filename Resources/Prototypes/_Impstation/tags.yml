@@ -58,6 +58,9 @@
   id: CartridgeBazooka
 
 - type: Tag
+  id: CartridgeFireball
+
+- type: Tag
   id: CartridgeLPistol
 
 - type: Tag
@@ -380,6 +383,9 @@
 
 - type: Tag
   id: SpeedLoaderSturm
+
+- type: Tag
+  id: SpeedLoaderFireball
 
 - type: Tag
   id: SpiderFood

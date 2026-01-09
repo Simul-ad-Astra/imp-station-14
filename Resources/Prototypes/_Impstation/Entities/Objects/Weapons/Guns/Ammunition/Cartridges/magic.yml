@@ -1,0 +1,19 @@
+- type: entity
+  id: CartridgeFireball
+  name: cartridge (.fireball magnum)
+  description: A magical pistol cartridge. It smells like a campfire.
+  parent: [ BaseCartridge, BaseMagicalContraband ]
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CartridgeFireball
+  - type: CartridgeAmmo
+    proto: ProjectileFireball
+  - type: Sprite
+    sprite: _Impstation/Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: Appearance
+  - type: SpentAmmoVisuals
