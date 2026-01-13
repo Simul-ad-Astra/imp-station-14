@@ -1,0 +1,46 @@
+- type: wireLayout
+  id: TankDispenser
+  dummyWires: 2
+  wires:
+  - !type:PowerWireAction
+  - !type:AiInteractWireAction
+
+# - type: wireLayout
+#   id: DrinkDispenser
+#   dummyWires: 2
+#   wires:
+#   - !type:PowerWireAction
+#   - !type:AiInteractWireAction
+
+# - type: wireLayout
+#   id: ChemDispenser
+#   dummyWires: 2
+#   wires:
+#   - !type:PowerWireAction
+#   - !type:AiInteractWireAction
+#   - !type:AccessWireAction
+
+- type: wireLayout
+  id: GasCanister
+  dummyWires: 2
+  wires:
+  - !type:PowerWireAction
+  - !type:AiInteractWireAction
+  - !type:AccessWireAction
+
+- type: wireLayout
+  id: ComputerCommandComms
+  dummyWires: 3
+  wires:
+  - !type:PowerWireAction
+  - !type:AiInteractWireAction
+  - !type:AccessWireAction
+
+- type: wireLayout
+  id: ComputerCargoOrdering
+  dummyWires: 3
+  wires:
+  - !type:PowerWireAction
+  - !type:AiInteractWireAction
+  - !type:AccessWireAction
+  # - !type:DoorAlarmWireAction

@@ -2298,6 +2298,9 @@
   - type: Sprite
     sprite: _Impstation/Structures/Machines/VendingMachines/tankdispenser.rsi #TODO add visualiser for remaining tanks as layers #imp
     state: dispenser
+  - type: Wires #imp add
+    layoutId: TankDispenser
+
 
 - type: entity
   parent: VendingMachine
@@ -2314,6 +2317,8 @@
     layers:
     - state: dispenser
     - state: dispensereng
+  - type: Wires #imp add
+    layoutId: TankDispenser
 
 - type: entity
   parent: VendingMachine

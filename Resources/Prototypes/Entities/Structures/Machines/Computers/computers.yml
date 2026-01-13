@@ -118,6 +118,9 @@
     radius: 1.5
     energy: 4.0
     color: "#43ccb5"
+  - type: Wires
+    layoutId: ComputerCommandComms
+
 
 - type: entity
   parent: BaseComputer
@@ -744,6 +747,8 @@
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallicStrong
+  - type: Wires
+    layoutId: ComputerCommandComms
 
 - type: entity
   parent: ComputerComms
@@ -991,6 +996,11 @@
   - type: GuideHelp
     guides:
     - Cargo
+  - type: Wires
+    layoutId: ComputerCargoOrdering
+  - type: WiresPanelSecurity
+    securityLevel: medSecurity
+
 
 # Request console variants.
 - type: entity
