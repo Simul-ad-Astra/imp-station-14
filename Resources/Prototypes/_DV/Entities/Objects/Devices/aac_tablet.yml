@@ -42,3 +42,8 @@
   - type: AACTablet
     phraseGroup: BasicPhrases
   - type: VoiceMask
+  - type: WiresVisuals
+  - type: WiresPanel
+  - type: Wires #imp add
+    boardName: wires-board-name-vendingmachine
+    layoutId: GasCanister

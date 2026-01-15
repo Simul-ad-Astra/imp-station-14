@@ -996,10 +996,10 @@
   - type: GuideHelp
     guides:
     - Cargo
-  - type: Wires
-    layoutId: ComputerCargoOrdering
-  - type: WiresPanelSecurity
-    securityLevel: medSecurity
+  # - type: Wires
+  #   layoutId: ComputerCargoOrdering
+  # - type: WiresPanelSecurity
+  #   securityLevel: medSecurity
 
 
 # Request console variants.

@@ -116,6 +116,8 @@
       - DisposalEject
       sources:
       - DisposalReady
+  # - type: Wires
+  #   layoutId: DrinkDispenser
 
 - type: entity
   id: MailingUnit
