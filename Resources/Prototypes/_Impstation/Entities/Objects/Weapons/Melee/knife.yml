@@ -51,3 +51,50 @@
   - type: Item
     sprite: _Impstation/Objects/Weapons/Melee/xenoborg_blade.rsi
     storedSprite: null
+
+- type: entity
+  parent: BaseKnife
+  id: KnifeThrowingGun
+  name: Flash Print knife
+  description: this one is a gun and also a knife. I don't like this one. I don't think it works well for what I'm going for
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Basic/kinetic_accelerator.rsi
+  - type: Item
+    sprite: Objects/Weapons/Guns/Basic/kinetic_accelerator.rsi
+    size: Large
+    shape:
+    - 0,0,2,1
+  - type: Gun
+    fireRate: 4 # 0.5 -> 4, fire rate handled with recharge instead
+    selectedMode: SemiAuto
+    angleDecay: 45
+    minAngle: 44
+    maxAngle: 45
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/_Impstation/Weapons/Guns/Gunshots/kinetic_accel_full.ogg
+    soundEmpty:
+      path: /Audio/_Impstation/Weapons/Guns/Empty/dry_fire.ogg
+      params:
+        volume: -5
+  - type: AmmoCounter
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.AmmoVisuals.HasAmmo:
+        empty-icon:
+          True: { visible: False }
+          False: { visible: True }
+        #todo: add other 'empty' animations
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 2
+    rechargeSound:
+      path: /Audio/_NF/Effects/silence.ogg # For some reason removing this part of the component makes it make a wizard sound instead of no sound???
+  - type: BasicEntityAmmoProvider
+    proto: BulletKinetic
+    capacity: 1
+    count: 1
+
+
