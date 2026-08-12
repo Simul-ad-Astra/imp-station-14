@@ -40,13 +40,13 @@ public sealed class MultiSlotClothingSystem : EntitySystem
             return;
         if (_inventorySystem.TryGetSlotEntity(args.Wearer, ent.Comp.Slot, out var existing)) // if the slot for the virtual item is already full
         {
-            _inventorySystem.TryUnequip(args.Wearer, args.Clothing.InSlot); // try to unequip the clothing
+            _inventorySystem.TryUnequip(args.Wearer, args.Clothing.InSlot, false, true); // try to unequip the clothing
             _popup.PopupClient(Loc.GetString("toggleable-clothing-remove-first", ("entity", existing)), ent.Owner);// and send a popup
             return;
         }
         if (!_virtualItem.TrySpawnVirtualItemInInventory(ent.Owner, args.Wearer, ent.Comp.Slot, true)) // try to make the virtual item
         {
-            _inventorySystem.TryUnequip(args.Wearer, args.Clothing.InSlot); // if it fails unequip the item
+            _inventorySystem.TryUnequip(args.Wearer, args.Clothing.InSlot, false, true); // if it fails unequip the item
             return;
         }
     }
