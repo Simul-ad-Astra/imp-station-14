@@ -30,24 +30,26 @@ public sealed class MultiSlotClothingSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<MultiSlotClothingComponent, ClothingGotEquippedEvent>(OnEquipped);
+        SubscribeLocalEvent<MultiSlotClothingComponent, BeingEquippedAttemptEvent>(TryEquipped);
         SubscribeLocalEvent<MultiSlotClothingComponent, ClothingGotUnequippedEvent>(OnUnequip);
     }
 
-    private void OnEquipped(Entity<MultiSlotClothingComponent> ent, ref ClothingGotEquippedEvent args)
+    private void TryEquipped(Entity<MultiSlotClothingComponent> ent, ref BeingEquippedAttemptEvent args)
     {
-        if (args.Clothing.InSlot == null) // if the clothing isn't in a slot
-            return;
-        if (_inventorySystem.TryGetSlotEntity(args.Wearer, ent.Comp.Slot, out var existing)) // if the slot for the virtual item is already full
+        if (args.Slot == null) // if the clothing isn't in a slot (this should probably never be able to be true):
         {
-            _inventorySystem.TryUnequip(args.Wearer, args.Clothing.InSlot, false, true); // try to unequip the clothing
-            _popup.PopupClient(Loc.GetString("toggleable-clothing-remove-first", ("entity", existing)), ent.Owner);// and send a popup
+            args.Cancel(); // cancel the attempt
             return;
         }
-        if (!_virtualItem.TrySpawnVirtualItemInInventory(ent.Owner, args.Wearer, ent.Comp.Slot, true)) // try to make the virtual item
+        if (_inventorySystem.TryGetSlotEntity(args.EquipTarget, ent.Comp.Slot, out var existing)) // if the slot for the virtual item is already full:
         {
-            _inventorySystem.TryUnequip(args.Wearer, args.Clothing.InSlot, false, true); // if it fails unequip the item
+            _popup.PopupClient(Loc.GetString("toggleable-clothing-remove-first", ("entity", existing)), ent.Owner);// send a popup
+            args.Cancel(); // and cancel the attempt
             return;
+        }
+        if (!_virtualItem.TrySpawnVirtualItemInInventory(ent.Owner, args.EquipTarget, ent.Comp.Slot, true)) // try to make the virtual item, if it fails:
+        {
+            args.Cancel(); // cancel the attempt
         }
     }
 
