@@ -470,6 +470,7 @@
     sound:
       path: /Audio/Effects/unwrap.ogg
 
+
 - type: entity
   parent: FoodTreatChunk
   id: FoodTreatChunkRandom
@@ -587,6 +588,12 @@
       - Lead
       - Nutriment
       - Sugar
+  - type: ActivatableUI
+    key: enum.ScreamingButtonUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ScreamingButtonUiKey.Key:
+        type: ScreamingButtonBoundUserInterface
 
 - type: entity
   parent: FoodTreatChunkOpen
