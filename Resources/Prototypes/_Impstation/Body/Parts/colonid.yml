@@ -22,7 +22,7 @@
 #     juiceSolution:
 #       reagents:
 #       - ReagentId: Plasma
-#         Quantity: 20
+#         Quantity: 20 # test comment
 
 # - type: entity
 #   id: HeadColonid
@@ -108,4 +108,4 @@
 #   components:
 #   - type: Sprite
 #     sprite: _Impstation/Mobs/Species/Colonid/parts.rsi
-#     state: "r_foot"
+#     state: "f_foot" # test
