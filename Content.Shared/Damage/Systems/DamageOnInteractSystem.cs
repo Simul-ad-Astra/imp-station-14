@@ -55,6 +55,9 @@ public sealed class DamageOnInteractSystem : EntitySystem
         if (!entity.Comp.IsDamageActive)
             return;
 
+        if (!_random.Prob(entity.Comp.DamageChance))
+            return;
+
         var totalDamage = entity.Comp.Damage;
 
         if (!entity.Comp.IgnoreResistances)

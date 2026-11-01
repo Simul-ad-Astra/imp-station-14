@@ -86,4 +86,10 @@ public sealed partial class DamageOnInteractComponent : Component
     /// </summary>
     [DataField]
     public float StunSeconds = 0.0f;
+
+    /// <summary>
+    /// Probabiliy that the damage will be dealt and the pickup will fail. Defaults to 100%
+    /// </summary>
+    [DataField]
+    public float DamageChance = 1.0f;
 }
