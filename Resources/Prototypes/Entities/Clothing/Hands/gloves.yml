@@ -131,6 +131,10 @@
       coefficients:
         Slash: 0.95
   - type: FingerprintMask
+  - type: DamageOnInteractProtection
+    damageProtection:
+      flatReductions:
+        Slash: 2
 
 #### Medical
 - type: entity

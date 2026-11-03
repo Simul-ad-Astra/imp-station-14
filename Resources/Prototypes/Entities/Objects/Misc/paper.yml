@@ -64,7 +64,22 @@
   - type: PhysicalComposition
     materialComposition:
       SheetPrinter: 100 # Corvax-Printer-End
-  - type: StationAiWhitelist #imp
+  # imp edit start
+  - type: StationAiWhitelist
+  - type: DamageOnInteract
+    damageChance: 0.01
+    damage:
+      types:
+        Slash: 2
+    throw: true
+    throwSpeed: 1
+    interactTimer: 1
+    ignoreResistances: false
+    popupText: popup-pickup-cut
+    interactSound: /Audio/Effects/packetrip.ogg
+    stunChance: 0
+    stunSeconds: 0
+  # imp edit end
 
 - type: entity
   name: paper
