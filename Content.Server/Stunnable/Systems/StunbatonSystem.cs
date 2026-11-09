@@ -67,6 +67,14 @@ namespace Content.Server.Stunnable.Systems
         {
             base.TryTurnOn(entity, ref args);
 
+            // imp edit start
+            if (false) // check for inserted power cell
+            {
+                // draw power from power cell
+                // might have to duplicate the below if block
+            }
+            // imp edit end
+
             if (!TryComp<BatteryComponent>(entity, out var battery) || _battery.GetCharge((entity, battery)) < entity.Comp.EnergyPerUse)
             {
                 args.Cancelled = true;
